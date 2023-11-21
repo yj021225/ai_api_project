@@ -33,4 +33,5 @@ cloud vision API key를 받고 javascript코드에 입력하여 호출한다.
  이미지를 삽입하면 cloud vision API를 호출해 이미지를 분류한다.
  
  - 웹 페이지 실행 결과
-![웹 페이지 실행 결과](./웹 페이지 실행 결과.png)
+
+![웹 페이지 실행 결과](https://github.com/yj021225/ai_api_project/blob/main/%EC%9B%B9%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%8B%A4%ED%96%89%20%EA%B2%B0%EA%B3%BC.png)
