@@ -19,6 +19,7 @@ cloud vision API key를 받고 javascript코드에 입력하여 호출한다.
 ### 3.2 이미지 분석
 ### 3.3 웹 페이지 디자인
  - 웹 페이지 디자인
+
 ![웹 페이지 디자인](https://github.com/yj021225/ai_api_project/blob/main/%EC%9B%B9%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%94%94%EC%9E%90%EC%9D%B8.png)
 
 ## 4.API 활용
