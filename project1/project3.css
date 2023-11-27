@@ -1,0 +1,49 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.fileform {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.filefield {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 0.8em;
+
+    cursor: pointer;
+}
+
+.imgframe{
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

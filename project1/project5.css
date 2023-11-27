@@ -1,0 +1,138 @@
+body {     
+    background-color: rgb(52, 52, 57);
+    color: white;
+    margin: 0;
+}
+
+.nav {
+    height: 70px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a30;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.nav-right-items {
+    display: flex;
+}
+
+.nav-item,
+.company-name {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+.company-name {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.title {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.price-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgb(129, 127, 127);
+    margin: 20px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.price-item-title {
+    font-size: 1.5rem;
+    background: rgb(232, 234, 237);
+    text-align: center;
+    height: 53px;
+    line-height: 53px;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.price-item-button {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    color: #ff0000;
+    background-color: transparent;
+    background-image: none;
+    border-color: #000000;
+    position: relative;
+    left: -10px; /* 원하는 만큼 음수 값으로 조절하세요 */
+    transform: translateX(43%);
+}
+
+.price-item-button--active {
+    background-color: #d62222;
+    color: white;
+}
+
+#fileform {
+    margin-top: 0;
+}
+
+#results,
+#resultr {
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* 업로드 섹션을 세로로 정렬하기 위한 스타일 추가 */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 결과 섹션을 세로로 정렬하기 위한 스타일 추가 */
+.result-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Image Analysis</title>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+         <script type="text/javascript" src="project6.js"></script>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+         <link rel="stylesheet" href="project6.css">
+     </head>
+     <body>
+         <div class="nav">
+             <div class="company-name">
+                <a class="nav-item" href="C:\dev\yjproject1\project1\project6.html">image Analysis</a>
+             </div>
+             <div class="nav-right-items">
+                 <a class="nav-item" href="C:\dev\yjproject1\project1\making1.html">image making</a>
+             </div>
+         </div>
+         <div class="main">
+             <div class="title">
+                 Image Analysis
+             </div>
+             <div class="subtitle">이미지 분석 웹 페이지입니다.</div>
+             <div class="prices">
+                 <div class="price-item" id="image-container"></div>
+                 <div class="result-section">
+                     <textarea name="results" id="results" cols="40" rows="7"></textarea>
+                     <textarea name="resultr" id="resultr" cols="40" rows="7"></textarea>
+                     <code style="white-space:pre" id="results"></code>
+                 </div>
+             </div>
+             <div class="upload-section">
+                 <div>
+                     <input type="file" name="fileField" id="fileField" onChange="uploadFiles(this.files)">
+                     <form id="fileform" action="">
+                         <select name="type" id="detectionType">
+                             <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
+                             <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
+                             <option value="FACE_DETECTION">FACE_DETECTION</option>
+                             <option value="LOGO_DETECTION">LOGO_DETECTION</option>
+                             <option value="LABEL_DETECTION" selected>LABEL_DETECTION</option>
+                             <option value="TEXT_DETECTION">TEXT_DETECTION</option>
+                             <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
+                             <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option>
+                         </select>
+                     </form>
+                 </div>
+                 <button class="price-item-button price-item-button--active" onclick="Send()">Submit</button>
+             </div>
+         </div>
+
+        </body>
+        </html>

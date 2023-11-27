@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+ <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <title>Cloud Vision Demo</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src="project3.js"></script>
+        <link rel="stylesheet" href="project3.css">
+     </head>
+     <body>
+        <form id="fileform" action="">
+            <select name="type">
+                <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
+                <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
+                <option value="FACE_DETECTION">FACE_DETECTION</option>
+                <option value="LOGO_DETECTION">LOGO_DETECTION</option>
+                <option value="LABEL_DETECTION" selected>LABEL_DETECTION</option>
+                <option value="TEXT_DETECTION">TEXT_DETECTION</option>
+                <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
+                <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option>
+            </select>
+            <br /> <input type="file" name="fileField" accept="image/*" onChange="uploadFiles(this.files)"><br />
+            <br /> <input type="button" id="button" name="submit" onclick=Send() value="Submit">
+       </form>
+            <textarea name="results" id="results" cols="50" rows="10">
+            </textarea>
+            <hr> <textarea name="resultr" id="resultr" cols="50" rows="10"></textarea>
+            <code style="white-space:pre" id="results"></code>
+
+            <img id="imgframe" width="400" height="400">
+
+        </body>
+        </html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="qwer.js"></script>
+    <style>
+        .fakeimg {
+            height: 200px;
+            background: #aaa;
+        }
+
+        body {
+            background-color: rgb(52, 52, 57);
+            color: white;
+            margin: 0;
+        }
+
+        .nav {
+            height: 60px;
+            border-bottom: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2a2a30;
+            margin: 0;
+            padding: 0 20px;
+        }
+
+        .nav-right-items {
+            display: flex;
+        }
+
+        .nav-item,
+        .company-name {
+            color: rgb(255, 255, 255);
+        }
+
+        .nav-item {
+            margin-left: 10px;
+        }
+
+        .company-name {
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 3.5rem;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .prices {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .price-item {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgb(129, 127, 127);
+            margin: 20px;
+            border-radius: 4px;
+            background-color: rgb(255, 255, 255);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .price-item-title {
+            font-size: 1.5rem;
+            background: rgb(232, 234, 237);
+            text-align: center;
+            height: 53px;
+            line-height: 53px;
+            border-bottom: 1px solid black;
+            color: black;
+        }
+
+        .price-item-button {
+            padding: .5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: .3rem;
+            color: #ff0000;
+            background-color: transparent;
+            background-image: none;
+            border-color: #000000;
+            position: relative;
+            left: -10px;
+            transform: translateX(43%);
+        }
+
+        .price-item-button--active {
+            background-color: #d62222;
+            color: white;
+        }
+
+        #fileform {
+            margin-top: 0;
+        }
+
+        #results,
+        #resultr {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(110, 109, 109);
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .upload-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .result-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* "그림에 대해 말씀하세요" 섹션의 스타일 수정 */
+        .input-group.mb-3 {
+            max-width: 300px; /* 원하는 만큼 조절 */
+            margin: auto; /* 중앙 정렬을 위해 추가 */
+        }
+
+        .form-control {
+            width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
+        }
+
+        .btn.btn-success {
+            width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="company-name">
+            Image Analysis
+        </div>
+    </div>
+    <div class="main">
+        <div class="title">
+            <img src="./현미경.png" alt="이미지">
+            Image Analysis
+        </div>
+        <div class="subtitle">이미지 분석 웹 페이지입니다.<br> 파일 선택에서 분석하고자 하는 이미지를 선택한 뒤 Submit을 눌러주세요.</div>
+        <div class="prices">
+            <div class="price-item" id="image-container"></div>
+            <div class="result-section">
+                <textarea name="results" id="results" cols="50" rows="10"></textarea>
+                <textarea name="resultr" id="resultr" cols="50" rows="10"></textarea>
+                <code style="white-space:pre" id="results"></code>
+            </div>
+        </div>
+        <div class="upload-section">
+            <div>
+                <input type="file" name="fileField" id="fileField" onChange="uploadFiles(this.files)">
+                <form id="fileform" action="">
+                    <select name="type" id="detectionType">
+                        <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
+                        <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
+                        <option value="FACE_DETECTION">FACE_DETECTION</option>
+                        <option value="LOGO_DETECTION">LOGO_DETECTION</option>
+                        <option value="LABEL_DETECTION" selected>LABEL_DETECTION</option>
+                        <option value="TEXT_DETECTION">TEXT_DETECTION</option>
+                        <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
+                        <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option>
+                    </select>
+                </form>
+            </div>
+            <button class="price-item-button price-item-button--active" onclick="Send()">Submit</button>
+            <button class="btn btn-success" type="submit" onclick="Draw()" id="btnSend" style="display: none;">대답하기</button>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="그림에 대해 말씀하세요" id="imgMsg">
+                <button class="btn btn-success" type="submit" onclick="Draw()" id="btnSend">Answer</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>비슷한 이미지생성</h2>
+
+    
+
+    <hr>
+    <img id="gimage" style="border:5px solid#555">
+    <script src="chat.js"></script>
+
+    <script>
+        var VISION_API_KEY = "AIzaSyD2KdEtfMwgebgQbE-N9xMoU23zkzpIgVg";
+        var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY;
+        var imagestring = "";
+
+        function processFile(event) {
+            var content = event.target.result;
+            imagestring = content.replace('data:image/jpeg;base64,', '');
+
+            var imageContainer = document.getElementById('image-container');
+            imageContainer.style.backgroundImage = 'url(' + content + ')';
+            imageContainer.style.backgroundPosition = 'center';
+            imageContainer.style.backgroundSize = 'cover';
+            imageContainer.style.backgroundRepeat = 'no-repeat';
+        }
+
+        function uploadFiles(files) {
+            var file = files[0];
+            var reader = new FileReader();
+            reader.onloadend = function (event) {
+                processFile(event);
+                // 이미지 업로드 시 select를 LABEL_DETECTION으로 변경
+                document.getElementById('detectionType').value = 'LABEL_DETECTION';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function Send() {
+            var request = {
+                requests: [{
+                    image: {
+                        content: imagestring
+                    },
+                    features: [{
+                        type: $('#fileform [name=type]').val(),
+                        maxResults: 200
+                    }]
+                }]
+            };
+
+            $.ajax({
+                type: "POST",
+                url: CV_URL,
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                data: JSON.stringify(request),
+                contentType: "application/json; charset=utf-8"
+            }).done(function (response) {
+                // displayJSON 함수 호출 (가정: 이 함수가 정의되어 있다고 가정)
+                displayJSON(response);
+
+                // resultr 텍스트 영역의 내용을 가져와서 imgMsg 입력 필드에 설정
+                var resultrText = $('#resultr').val();
+                $('#imgMsg').val(resultrText);
+
+                // "btnSend" 버튼 클릭
+                $('#btnSend').click();
+            }).fail(function (error) {
+                alert("!/error  js에서 에러발생: " + error);
+            });
+        }
+    </script>
+</body>
+
+</html>

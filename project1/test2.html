@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        li {
+          list-style: none;
+        }
+    
+        img {
+          width: 200px;
+          height: 200px;
+        }
+    
+        .real-upload {
+          display: none;
+        }
+    
+        .upload {
+          width: 200px;
+          height: 200px;
+          background-color: antiquewhite;
+        }
+    
+        .image-preview {
+          width: 1300px;
+          height: 200px;
+          background-color: aquamarine;
+          display: flex;
+          gap: 20px;
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" class="real-upload" accept="image/*" required multiple>
+  <div class="upload"></div>
+  <ul class="image-preview"></ul>
+
+  <script src="test2.js"></script>
+</body>
+</html>
