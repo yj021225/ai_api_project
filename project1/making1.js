@@ -1,5 +1,5 @@
 var OPENAI_API_KEY =
-        "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";
+        "";
 
 function Draw(){
 
