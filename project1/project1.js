@@ -1,5 +1,5 @@
 // Cloud Vision API 키를 설정합니다.
-const visionKey = "e010cbb519f70b75a867b3620147ee3407aeb186";
+const visionKey = "";
 
 // 이미지 파일을 읽습니다.
 
