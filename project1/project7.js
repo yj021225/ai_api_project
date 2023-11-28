@@ -1,7 +1,7 @@
-var VISION_API_KEY = "AIzaSyAJQTYa0dMdl3NiuyJwgJMbNPZ23S9GstI";
+var VISION_API_KEY = "";
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY;
 
-var imagestring = null;
+var imagestring = "";
 
 function processFile(event) {
     var content = event.target.result;
@@ -25,6 +25,19 @@ function uploadFiles(files) {
     reader.readAsDataURL(file);
 }
 
+function displayJSON(data) {
+    var contents = JSON.stringify(data, null, 4);
+    $('#results').text(contents);
+
+    var dlabels = [];
+    var labels = data.responses[0].labelAnnotations;
+    console.log(labels);
+    labels.forEach(function (label) {
+        dlabels += label.description + ",";
+    });
+    $('#resultr').text(dlabels);
+}
+
 function Send() {
     var request = {
         requests: [{
@@ -33,7 +46,7 @@ function Send() {
             },
             features: [{
                 type: $('#fileform [name=type]').val(),
-                maxResults: 10
+                maxResults: 5
             }]
         }]
     };
@@ -47,21 +60,17 @@ function Send() {
         },
         data: JSON.stringify(request),
         contentType: "application/json; charset=utf-8"
-    }).done(displayJSON)
-        .fail(function (error) {
-            alert("!/error  js에서 에러발생: " + error);
-         });
-}
+    }).done(function (response) {
+        // displayJSON 함수 호출 (가정: 이 함수가 정의되어 있다고 가정)
+        displayJSON(response);
 
-function displayJSON(data) {
-    var contents = JSON.stringify(data, null, 4);
-    $('#results').text(contents);
+        // resultr 텍스트 영역의 내용을 가져와서 imgMsg 입력 필드에 설정
+        var resultrText = $('#resultr').val();
+        $('#imgMsg').val(resultrText + ' in abstract painting');
 
-    var dlabels = null;
-    var labels = data.responses[0].labelAnnotations;
-    console.log(labels);
-    labels.forEach(function (label) {
-        dlabels += label.description + "\n";
+        // "btnSend" 버튼 클릭
+        $('#btnSend').click();
+    }).fail(function (error) {
+        alert("!/error  js에서 에러발생: " + error);
     });
-    $('#resultr').text(dlabels);
 }

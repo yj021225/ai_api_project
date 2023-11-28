@@ -146,15 +146,15 @@ body {
 }
 
 /* "그림에 대해 말씀하세요" 섹션의 스타일 수정 */
-.input-group.mb-3 {
-    max-width: 300px; /* 원하는 만큼 조절 */
-    margin: auto; /* 중앙 정렬을 위해 추가 */
-}
+/* .input-group.mb-3 { */
+    /* max-width: 300px; 원하는 만큼 조절 */
+    /* margin: auto; 중앙 정렬을 위해 추가 */
+/* } */
 
-.form-control {
-    width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
-}
+/* .form-control { */
+    /* width: 100%; 부모의 100%로 설정하여 너비 조절 */
+/* } */
 
-.btn.btn-success {
-    width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
-}
+/* .btn.btn-success { */
+    /* width: 100%; 부모의 100%로 설정하여 너비 조절 */
+/* } */
