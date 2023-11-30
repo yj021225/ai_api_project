@@ -1,4 +1,4 @@
-var VISION_API_KEY = "AIzaSyAJQTYa0dMdl3NiuyJwgJMbNPZ23S9GstI";
+var VISION_API_KEY = "";
 var CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + VISION_API_KEY;
 
 imagestring = null
