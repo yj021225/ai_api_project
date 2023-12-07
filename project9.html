@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>image analysis</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script type="text/javascript" src="project7.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="project7.css">
+    </head>
+    <body>
+        <!-- 네비게이션 및 메인 섹션 -->
+        <div class="nav">
+            <div class="company-name">
+                Image Analysis
+            </div>
+        </div>
+        <div class="main">
+            <!-- 이미지 분석 섹션 -->
+            <div class="title">
+                Image Analysis
+            </div>
+            <div class="subtitle">이미지 분석 웹 페이지입니다.<br> 파일 선택에서 분석하고자 하는 이미지를 선택한 뒤 Submit을 눌러주세요.</div>
+            <div class="prices">
+                <!-- 이미지 표시 섹션 -->
+                <div class="price-item" id="image-container"></div>
+                <!-- 결과 표시 섹션 -->
+                <div class="result-section">
+                    <textarea name="results" id="results" cols="50" rows="10" style="display: none;"></textarea>
+                    <textarea name="resultr" id="resultr" cols="50" rows="10" style="display: none;"></textarea>
+                </div>
+                <img id="gimage" style="border: 5px solid #555; background-color: rgb(255, 255, 255); width: 300px; height: 300px; ">
+            </div>
+            <!-- 이미지 업로드 및 분석 섹션 -->
+            <div class="upload-section">
+                <div>
+                    <!-- 이미지 업로드 폼 -->
+                    <input type="file" name="fileField" id="fileField" onChange="uploadFiles(this.files)">
+                    <!-- 이미지 타입 선택 폼 -->
+                    <form id="fileform" action="">
+                        <select name="type" id="detectionType" style="display: none;">
+                            <option value="LABEL_DETECTION" selected>LABEL_DETECTION</option>
+                        </select>
+                    </form>
+                </div>
+                <!-- 이미지 분석 버튼 -->
+                <button class="price-item-button price-item-button--active" onclick="Send()">Submit</button>
+                <!-- 추가 버튼 (예: 대답하기) -->
+                <button class="btn btn-success" type="submit" onclick="Draw()" id="btnSend" style="display: none;">대답하기</button>
+            </div>
+        <button name="textkan" id="textkan" cols="37" rows="2" font size="60">선택한 이미지</button>
+        <button name="textkaan" id="textkaan" cols="37" rows="2">비슷한 이미지</button>
+        </div>
+        <!-- 그림에 대해 말씀하세요 섹션 -->
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="그림에 대해 말씀하세요" id="imgMsg">
+        </div>
+
+        <!-- 추가 스크립트 -->
+        <script src="making1.js"></script>
+        
+        <script type="text/javascript" src="project9.js"></script>
+    </body>
+    </html>
