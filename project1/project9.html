@@ -31,7 +31,6 @@
                 <div class="result-section">
                     <textarea name="results" id="results" cols="50" rows="10" style="display: none;"></textarea>
                     <textarea name="resultr" id="resultr" cols="50" rows="10" style="display: none;"></textarea>
-                    <!-- <code style="white-space:pre" id="results"></code> -->
                 </div>
                 <img id="gimage" style="border: 5px solid #555; background-color: rgb(255, 255, 255); width: 300px; height: 300px; ">
             </div>
@@ -43,14 +42,7 @@
                     <!-- 이미지 타입 선택 폼 -->
                     <form id="fileform" action="">
                         <select name="type" id="detectionType" style="display: none;">
-                            <!-- <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
-                            <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
-                            <option value="FACE_DETECTION">FACE_DETECTION</option>
-                            <option value="LOGO_DETECTION">LOGO_DETECTION</option> -->
                             <option value="LABEL_DETECTION" selected>LABEL_DETECTION</option>
-                            <!-- <option value="TEXT_DETECTION">TEXT_DETECTION</option>
-                            <option value="SAFE_SEARCH_DETECTION">SAFE_SEARCH_DETECTION</option>
-                            <option value="IMAGE_PROPERTIES">IMAGE_PROPERTIES</option> -->
                         </select>
                     </form>
                 </div>
@@ -59,18 +51,13 @@
                 <!-- 추가 버튼 (예: 대답하기) -->
                 <button class="btn btn-success" type="submit" onclick="Draw()" id="btnSend" style="display: none;">대답하기</button>
             </div>
-            <textarea name="textkan" id="textkan" cols="37" rows="2" >↑선택한 이미지</textarea>
-            <textarea name="textkaan" id="textkaan" cols="37" rows="2" >↑비슷한 이미지</textarea>
+        <button name="textkan" id="textkan" cols="37" rows="2" font size="60">선택한 이미지</button>
+        <button name="textkaan" id="textkaan" cols="37" rows="2">비슷한 이미지</button>
         </div>
-    
         <!-- 그림에 대해 말씀하세요 섹션 -->
-        <!-- <h2>비슷한 이미지생성</h2> -->
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="그림에 대해 말씀하세요" id="imgMsg">
         </div>
-    
-        <!-- <img id="gimage" style="border: 5px solid #555; width: 300px; height: 300px; border-radius: 20px;"> -->
-
 
         <!-- 추가 스크립트 -->
         <script src="making1.js"></script>

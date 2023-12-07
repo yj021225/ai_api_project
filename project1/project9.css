@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(52, 52, 57);
+    background-color: rgb(40, 40, 43);
     color: white;
     margin: 0;
 }
@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2a2a30;
+    background-color: #212124;
     margin: 0;
     padding: 0 20px;
 }
@@ -65,15 +65,15 @@ body {
     align-items: center;
     justify-content: center;
     margin-right: 50px;
-    margin-top: -60px;
+    margin-top: -15px;
 }
 
 .prices {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .price-item {
@@ -87,10 +87,7 @@ gap: 20px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px; */
+    border-radius: 20px;
 }
 
 .price-item-title {
@@ -136,26 +133,37 @@ gap: 20px;
 }
 
 #textkan {
-    margin-top: -190px;
+    margin-top: -189px;
     margin-right: 380px;
-    text-align : center;
+    text-align: center;
     border: none;
-    
-resize: none;
+    resize: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 100px;
 }
 
 #textkaan {
-    margin-top: -55px;
+    margin-top: -41px;
     margin-right: -380px;
-    text-align : center;
+    text-align: center;
     border: none;
-resize: none;
+    resize: none;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 100px;
+
+    
 }
 
 #gimage {
     margin: 20px;
-} /* 필요에 따라 상단 마진 값을 조절하세요 */
-/* 필요에 따라 상단 마진 값을 조절하세요 */
+    border-radius: 20px;
+}
 
 
 .upload-section {
@@ -174,23 +182,22 @@ resize: none;
     gap: 10px;
 }
 
-
 /* "그림에 대해 말씀하세요" 섹션의 스타일 수정 */
 .input-group.mb-3 {
-    max-width: 300px; /* 원하는 만큼 조절 */
-    margin: auto; /* 중앙 정렬을 위해 추가 */
+    max-width: 300px;
+    margin: auto;
 }
 
 .form-control {
-    width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
+    width: 100%;
 }
 
 .btn.btn-success {
-    width: 100%; /* 부모의 100%로 설정하여 너비 조절 */
+    width: 100%;
 }
 
 .input-group.mb-3 {
-max-width: 300px;
-margin: auto;
-display: none; /* Add this line to hide the element initially */
+    max-width: 300px;
+    margin: auto;
+    display: none;
 }

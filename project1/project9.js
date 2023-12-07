@@ -6,6 +6,7 @@ function processFile(event) {
     var content = event.target.result;
     imagestring = content.replace('data:image/jpeg;base64,', '');
 
+    // 이미지를 미리보기로 표시
     var imageContainer = document.getElementById('image-container');
     imageContainer.style.backgroundImage = 'url(' + content + ')';
     imageContainer.style.backgroundPosition = 'center';
@@ -27,7 +28,7 @@ function uploadFiles(files) {
 
 // 이미지 분석 및 결과 표시 함수
 function Send() {
-    var detectionType = $('#fileform [name=type]').val();
+    var detectionType = $('#fileform select[name=type]').val();
     console.log("Detection Type:", detectionType);
 
     var request = {
@@ -37,7 +38,7 @@ function Send() {
             },
             features: [{
                 type: detectionType,
-                maxResults: 7
+                maxResults: 5
             }]
         }]
     };
@@ -65,3 +66,19 @@ function Send() {
         alert("!/error  js에서 에러발생: " + error);
     });
 }
+
+// displayJSON 함수 추가
+// function displayJSON(data) {
+//     var contents = JSON.stringify(data, null, 4);
+//     $('#results').text(contents);
+
+//     var dlabels = "";
+//     var labels = data.responses[0].labelAnnotations;
+
+//     console.log(labels);
+
+//     labels.forEach(function (label) {
+//         dlabels += label.description + "\n";
+//     });
+//     $('#resultr').text(dlabels);
+// }
