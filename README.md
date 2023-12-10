@@ -38,7 +38,7 @@ open API key를 받고 javascript코드에 입력하여 호출한다.
  
  - 웹 페이지 실행 결과
 
-![웹 페이지 실행 결과](https://github.com/yj021225/ai_api_project/blob/main/%EC%9B%B9%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%8B%A4%ED%96%89%20%EA%B2%B0%EA%B3%BC.png)
+![웹 페이지 실행 결과](https://github.com/yj021225/ai_api_project/blob/ac952b13ea5ea44dc136c7a180d0b9a3cb9cbc67/%EC%8B%A4%ED%96%89%20%ED%99%94%EB%A9%B4%20%EC%B5%9C%EC%A2%85.png)
 
 ## 6. 현재 진척상황 및 문제점
 ***
