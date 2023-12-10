@@ -35,7 +35,7 @@ cloud vision API는 다음과 같이 이미지를 분석해준다.
  - cloud vision API
 ![API 활용 예시](https://github.com/yj021225/ai_api_project/blob/main/API%20%ED%99%9C%EC%9A%A9%EC%98%88%EC%8B%9C_2.png)
 - open API
-![API 활용 예시](https://github.com/yj021225/ai_api_project/blob/main/API%20%ED%99%9C%EC%9A%A9%EC%98%88%EC%8B%9C_2.png)
+![API 활용 예시](https://github.com/yj021225/ai_api_project/blob/3d6e9af4b5d3dc701e0a54184db92b1582c9bff2/open%20API%ED%99%9C%EC%9A%A9%20%EC%98%88%EC%8B%9C.png)
 
 ## 5. 실행 결과
 * * *
