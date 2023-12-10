@@ -22,7 +22,7 @@ cloud vision API key를 받고 javascript코드에 입력하여 호출한다.
 open API key를 받고 javascript코드에 입력하여 호출한다.
 ### 3.2 이미지 분석
 ***
-![이미지 분석](https://github.com/yj021225/ai_api_project/blob/main/%EC%9B%B9%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%94%94%EC%9E%90%EC%9D%B8.png)
+![이미지 분석](https://github.com/yj021225/ai_api_project/blob/e31267535b850c0939e74a379c59464350cb300b/%EC%9D%B4%EB%AF%B8%EC%A7%80%20%EB%B6%84%EC%84%9D.png)
 cloud vision API는 다음과 같이 이미지를 분석해준다.
 ### 3.3 웹 페이지 디자인
  - 웹 페이지 디자인
