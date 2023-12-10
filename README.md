@@ -12,10 +12,14 @@
 ## 2. 활용할 인공지능 API
 * * *
  - cloud vision API
+ - open api
 ## 3. 웹 페이지 구축
-### 3.1 cloud vision API 호출
+### 3.1.1 cloud vision API 호출
 ***
 cloud vision API key를 받고 javascript코드에 입력하여 호출한다.
+### 3.1.2 open API 호출
+***
+open API key를 받고 javascript코드에 입력하여 호출한다.
 ### 3.2 이미지 분석
 ### 3.3 웹 페이지 디자인
  - 웹 페이지 디자인
