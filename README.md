@@ -21,6 +21,8 @@ cloud vision API key를 받고 javascript코드에 입력하여 호출한다.
 ***
 open API key를 받고 javascript코드에 입력하여 호출한다.
 ### 3.2 이미지 분석
+***
+cloud vision API는 다음과 같이 이미지를 분석해준다.
 ### 3.3 웹 페이지 디자인
  - 웹 페이지 디자인
 
