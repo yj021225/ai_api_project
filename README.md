@@ -29,7 +29,7 @@ cloud vision API는 다음과 같이 이미지를 분석해준다.
 
 ![웹 페이지 디자인](https://github.com/yj021225/ai_api_project/blob/main/%EC%9B%B9%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%94%94%EC%9E%90%EC%9D%B8.png)
 
-## 4.API 활용
+## 4. API 활용
 * * *
 ### 4.1 API 활용 예시
  - cloud vision API
